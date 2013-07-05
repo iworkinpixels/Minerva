@@ -20,7 +20,7 @@
 
 	$questions_total = $_SESSION['qtotal'] ? $_SESSION['qtotal'] : 0;
 	$questions_correct = $_SESSION['qcorrect'] ? $_SESSION['qcorrect'] : 0;
-	$questions_percent = (int)(($questions_correct / ($questions_total + 0.001)) * 100);
+	$questions_percent = (int)(($questions_correct / ($questions_total + 0.001)) * 100) + 1;
 
 	$id = $question_data['id'];
 	$question = $question_data['question'];
@@ -45,16 +45,12 @@
 			<div id="main-container">
 				<div id="score">CURRENT SCORE: <span id="correct-questions"><?=$questions_correct?></span> out of <span id="total-questions"><?=$questions_total?></span>&nbsp;(<?=$questions_percent?>%)</div>
 				<div id="question"><?=$question?></div>
-				<table id="answers" cellspacing="15" cellpadding="0" border="0">
-					<tr>
-						<td class="answer" valign="top" align="left"><a id="answer-a" href="index.php?q=<?=$id?>&a=a"><h2>A:</h2><?=$a?></a></td>
-						<td class="answer" valign="top" align="left"><a id="answer-b" href="index.php?q=<?=$id?>&a=b"><h2>B:</h2><?=$b?></a></td>
-					</tr>
-					<tr>
-						<td class="answer" valign="top" align="left"><a id="answer-c" href="index.php?q=<?=$id?>&a=c"><h2>C:</h2><?=$c?></a></td>
-						<td class="answer" valign="top" align="left"><a id="answer-d" href="index.php?q=<?=$id?>&a=d"><h2>D:</h2><?=$d?></a></td>
-					</tr>
-				</table>
+				<ul id="answers">
+					<li class="answer"><a id="answer-a" href="index.php?q=<?=$id?>&a=a"><h2>A:</h2><?=$a?></a></li>
+					<li class="answer"><a id="answer-b" href="index.php?q=<?=$id?>&a=b"><h2>B:</h2><?=$b?></a></li>
+					<li class="answer"><a id="answer-c" href="index.php?q=<?=$id?>&a=c"><h2>C:</h2><?=$c?></a></li>
+					<li class="answer"><a id="answer-d" href="index.php?q=<?=$id?>&a=d"><h2>D:</h2><?=$d?></a></li>
+				</ul>
 			</div>
 	</body>
 </html>

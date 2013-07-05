@@ -21,30 +21,33 @@ body, html {
   text-align: right;
   font-weight: normal;
 }
+
 #question {
-  display: table-cell;
-  vertical-align: middle;
   padding: 30px;
-  height: 340px;
   text-align: center;
   color: #333;
   font-size: 42px;
   line-height: 48px;
 }
+
 #answers {
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  width: 100%;
+  width: 95%;
+  list-style: none outside none;
 }
-#answers td.answer {
+
+#answers li {
   border: solid #333 2px;
-  width: 668px;
+  margin: 25px 0;
 }
-#answers td.answer a h2 {
+
+#answers li.selected-answer {
+  background-color: #ccccff;
+}
+
+#answers li a h2 {
   position: absolute;
-  top: -10px;
-  left: -10px;
+  left: -15px;
+  top: -15px;
   display: block;
   padding: 5px;
   margin: 0;
@@ -53,18 +56,21 @@ body, html {
   color: #fff;
   font-size: 36px;
 }
-#answers td.answer a {
+
+#answers li.selected-answer a h2 {
+  background-clor: #666;
+}
+
+#answers li a {
   position: relative;
-  display: table;
-  padding-left: 45px;
-  width: 535px;
+  display: block;
+  padding: 10px 0 10px 45px;
+  width: 1115px;
   height: 100%;
   color: #333;
   text-decoration: none;
 }
-#answers td a:hover {
-  color: #999;
-}
-.marquee {
 
+#answers li a:hover {
+  color: #999;
 }

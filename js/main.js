@@ -1,25 +1,18 @@
 $(document).ready(function() {
   $(document).keydown(function(e){
     switch(e.which) {
-      case 37: // left
-        var url = $('#answer-a').attr('href');
+      case 32: // space bar is submit the currently selected answer
+        var url = $('li.selected-answer').attr('href');
         if(url.type != 'undefined') window.location.href = url;
         break;
+         
+      case 37: // left is select previous answer
 
-      case 38: // up
-        var url = $('#answer-b').attr('href');
-        if(url.type != 'undefined') window.location.href = url;
-        break;
+      case 39: // right is select next answer
+      
+      case 38: // up is page up
 
-      case 39: // right
-        var url = $('#answer-c').attr('href');
-        if(url.type != 'undefined') window.location.href = url;
-        break;
-
-      case 40: // down
-        var url = $('#answer-d').attr('href');
-        if(url.type != 'undefined') window.location.href = url;
-        break;
+      case 40: // down is page down
 
       default: return; // exit this handler for other keys
     }
