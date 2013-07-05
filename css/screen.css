@@ -1,0 +1,70 @@
+body, html {
+  font-family: 'Arial', 'Helvetica', 'Sans Sarif';
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: bold;
+}
+#main-container {
+  position: relative;
+  margin: 5% auto;
+  width: 1260px;
+  height: 768px;
+}
+
+#score {
+  width: 1250px;
+  padding: 5px;
+  margin-bottom: 5px;
+  font-size: 24px;
+  background-color: #333;
+  color: #f0f0f0;
+  text-align: right;
+  font-weight: normal;
+}
+#question {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 30px;
+  height: 340px;
+  text-align: center;
+  color: #333;
+  font-size: 42px;
+  line-height: 48px;
+}
+#answers {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+}
+#answers td.answer {
+  border: solid #333 2px;
+  width: 668px;
+}
+#answers td.answer a h2 {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: block;
+  padding: 5px;
+  margin: 0;
+  text-align: right;
+  background-color: #333;
+  color: #fff;
+  font-size: 36px;
+}
+#answers td.answer a {
+  position: relative;
+  display: table;
+  padding-left: 45px;
+  width: 535px;
+  height: 100%;
+  color: #333;
+  text-decoration: none;
+}
+#answers td a:hover {
+  color: #999;
+}
+.marquee {
+
+}
