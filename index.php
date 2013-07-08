@@ -46,10 +46,10 @@
 				<div id="score">CURRENT SCORE: <span id="correct-questions"><?=$questions_correct?></span> out of <span id="total-questions"><?=$questions_total?></span>&nbsp;(<?=$questions_percent?>%)</div>
 				<div id="question"><?=$question?></div>
 				<ul id="answers">
-					<li class="answer"><a id="answer-a" href="index.php?q=<?=$id?>&a=a"><h2>A:</h2><?=$a?></a></li>
-					<li class="answer"><a id="answer-b" href="index.php?q=<?=$id?>&a=b"><h2>B:</h2><?=$b?></a></li>
-					<li class="answer"><a id="answer-c" href="index.php?q=<?=$id?>&a=c"><h2>C:</h2><?=$c?></a></li>
-					<li class="answer"><a id="answer-d" href="index.php?q=<?=$id?>&a=d"><h2>D:</h2><?=$d?></a></li>
+					<li id="li-a" class="answer"><a id="answer-a" href="index.php?q=<?=$id?>&a=a"><h2>A:</h2><?=$a?></a></li>
+					<li id="li-b" class="answer"><a id="answer-b" href="index.php?q=<?=$id?>&a=b"><h2>B:</h2><?=$b?></a></li>
+					<li id="li-c" class="answer"><a id="answer-c" href="index.php?q=<?=$id?>&a=c"><h2>C:</h2><?=$c?></a></li>
+					<li id="li-d" class="answer"><a id="answer-d" href="index.php?q=<?=$id?>&a=d"><h2>D:</h2><?=$d?></a></li>
 				</ul>
 			</div>
 	</body>
