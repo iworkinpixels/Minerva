@@ -53,6 +53,7 @@
 				</ul>
 				<div id="clock">2:41:36 PM</div>
 			</div>
+			<div id="score">Current Score: <?=$questions_correct?> out of <?=$questions_total?> (<?=$questions_percent?>%)</div>
 			<div id="question"><?=$question?></div>
 			<ul id="answers">
 				<li id="li-a" class="answer"><a id="answer-a" href="index.php?q=<?=$id?>&a=a"><h2>A:</h2><?=$a?></a></li>
