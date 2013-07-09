@@ -1,8 +1,3 @@
-function switchTo(theID){
-  $('li.selected-answer').removeClass('selected-answer');
-  $(theID).addClass('selected-answer');
-}
-
 $(document).ready(function() {
   $(document).keydown(function(e){
     switch(e.which) {
@@ -46,3 +41,36 @@ $(document).ready(function() {
     e.preventDefault();
   });
 });
+
+
+function startTime() {
+  var today=new Date();
+  var h=today.getHours();
+  // The hell with military time
+  if (h > 12) {
+    h = h - 12;
+    ampm = 'PM';
+  } else {
+    ampm = 'AM';
+  }
+  var m=today.getMinutes();
+  var s=today.getSeconds();
+  // add a zero in front of numbers<10
+  m=checkTime(m);
+  s=checkTime(s);
+  document.getElementById('clock').innerHTML=h+":"+m+":"+s+" "+ampm;
+  t=setTimeout(function(){startTime()},500);
+}
+
+function checkTime(i) {
+  if (i<10) {
+    i="0" + i;
+  }
+  return i;
+}
+
+function switchTo(theID){
+  $('li.selected-answer').removeClass('selected-answer');
+  $(theID).addClass('selected-answer');
+}
+

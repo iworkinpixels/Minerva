@@ -41,7 +41,7 @@
         <script src="js/jquery-2.0.3.min.js"></script>
 		<script src="js/main.js"></script>
 	</head>
-    <body>
+    <body onload="startTime()">
 		<div id="main-container">
 			<div id="menubar">
 				<ul id="nav">
