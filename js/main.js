@@ -38,9 +38,9 @@ $(document).ready(function() {
           break;
       
       case 38: // up is page up
-          break;
+          return;
       case 40: // down is page down
-          break;
+          return;
       default: return; // exit this handler for other keys
     }
     e.preventDefault();
