@@ -5,12 +5,10 @@ $(document).ready(function() {
       zipcode: '11375',
       unit: 'f',
       success: function(weather) {
-          html = '<img style="float:right;" width="125px" src="'+weather.image+'">';
-          html += '<p><h2>'+weather.temp+'&deg; '+weather.units.temp+'<br/><span>'+weather.currently+'</span>'+'</h2>';
-          html += '<span style="float: right;">'+weather.city+', '+weather.region+'</span></p>';
-          html += '<a style="float: right;" href="'+weather.link+'">View Forecast &raquo;</a>';
-
-          $("#weather").html(html);
+          html = '<div id="current-temp">'+weather.temp+'&deg; '+weather.units.temp+'<br/><span id="current-conditions">'+weather.currently+'</span></div>';
+          $('#current-temp').html(weather.temp+'&deg; '+weather.units.temp);
+          $('#current-condition').html(weather.currently);
+          $('#current-location').html(weather.city+', '+weather.region);
       },
       error: function(error) {
           $("#weather").html('<p>'+error+'</p>');

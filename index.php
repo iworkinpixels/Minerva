@@ -47,8 +47,8 @@
 			<ul id="nav">
 				<li id="nav-home">Home</li>
 				<li id="nav-news">News</li>
-				<li id="nav-weather">Weather</li>
-				<li id="nav-tests" class="selected">Tests</li>
+				<li id="nav-weather" class="selected">Weather</li>
+				<li id="nav-tests">Tests</li>
 			</ul>
 			<div id="clock">2:41:36 PM</div>
 		</div>
@@ -60,7 +60,9 @@
 				News content goes here!
 			</div>
 			<div id="weather">
-				Weather content goes here!
+				<div id="current-temp">81.9&deg; F</div>
+				<div id="current-condition">Cloudy</div>
+				<div id="current-location">Forest Hills, NY</div>
 			</div>
 			<div id="tests">
 				<div id="score">Current Score: <?=$questions_correct?> out of <?=$questions_total?> (<?=$questions_percent?>%)</div>
