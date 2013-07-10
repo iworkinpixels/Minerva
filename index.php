@@ -60,7 +60,7 @@
 				News content goes here!
 			</div>
 			<div id="weather">
-				<div id="current-temp">81.9&deg; F</div>
+				<div id="current-temp">72.0&deg;&nbsp;F</div>
 				<div id="current-condition">Cloudy</div>
 				<div id="current-location">Forest Hills, NY</div>
 			</div>

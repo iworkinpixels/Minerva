@@ -6,7 +6,7 @@ $(document).ready(function() {
       unit: 'f',
       success: function(weather) {
           html = '<div id="current-temp">'+weather.temp+'&deg; '+weather.units.temp+'<br/><span id="current-conditions">'+weather.currently+'</span></div>';
-          $('#current-temp').html(weather.temp+'&deg; '+weather.units.temp);
+          $('#current-temp').html(weather.temp+'&deg;&nbsp;'+weather.units.temp);
           $('#current-condition').html(weather.currently);
           $('#current-location').html(weather.city+', '+weather.region);
       },
