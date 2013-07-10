@@ -1,4 +1,4 @@
-var mode="answers";
+var mode="tests";
 
 $(document).ready(function() {
   $(document).keydown(function(e){
@@ -9,7 +9,7 @@ $(document).ready(function() {
         break;
          
       case 37: // left is select previous answer
-          if (mode == 'answers') {
+          if (mode == 'tests') {
             if ($('#li-d').hasClass('selected-answer'))
               switchTo('#li-c');
             else if ($('#li-c').hasClass('selected-answer'))
@@ -33,7 +33,7 @@ $(document).ready(function() {
           break;
             
       case 39: // right is select next answer
-          if (mode == 'answers') {
+          if (mode == 'tests') {
             if ($('#li-a').hasClass('selected-answer'))
               switchTo('#li-b');
             else if ($('#li-b').hasClass('selected-answer'))
@@ -58,13 +58,11 @@ $(document).ready(function() {
       
       case 38: // up is page up
         mode = "nav";
-        $('#menubar-coverup').css('display','none');
-        $('#main-div-coverup').css('display','block');
+        $('#menubar').fadeIn(100);
         return;
       case 40: // down is page down
-        mode = "answers";
-        $('#menubar-coverup').css('display','block');
-        $('#main-div-coverup').css('display','none');
+        mode = "tests";
+        $('#menubar').fadeOut(100);
         return;
       default: return; // exit this handler for other keys
     }

@@ -51,7 +51,6 @@
 					<li id="nav-tests" class="selected">Tests</li>
 				</ul>
 				<div id="clock">2:41:36 PM</div>
-				<div id="menubar-coverup"></div>
 			</div>
 			<div id="home">
 				Homepage content goes here!
@@ -73,6 +72,5 @@
 				</ul>
 			</div>
 		</div>
-		<div id="main-div-coverup"></div>
 	</body>
 </html>
