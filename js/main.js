@@ -58,11 +58,11 @@ $(document).ready(function() {
       
       case 38: // up is page up
         mode = "nav";
-        $('#menubar').fadeIn(100);
+        $('#menubar').slideDown(250);
         return;
       case 40: // down is page down
         mode = "tests";
-        $('#menubar').fadeOut(100);
+        $('#menubar').slideUp(250);
         return;
       default: return; // exit this handler for other keys
     }

@@ -42,16 +42,16 @@
 		<script src="js/main.js"></script>
 	</head>
     <body onload="startTime()">
+		<div id="menubar">
+			<ul id="nav">
+				<li id="nav-home">Home</li>
+				<li id="nav-news">News</li>
+				<li id="nav-weather">Weather</li>
+				<li id="nav-tests" class="selected">Tests</li>
+			</ul>
+			<div id="clock">2:41:36 PM</div>
+		</div>
 		<div id="main-container">
-			<div id="menubar">
-				<ul id="nav">
-					<li id="nav-home">Home</li>
-					<li id="nav-news">News</li>
-					<li id="nav-weather">Weather</li>
-					<li id="nav-tests" class="selected">Tests</li>
-				</ul>
-				<div id="clock">2:41:36 PM</div>
-			</div>
 			<div id="home">
 				Homepage content goes here!
 			</div>
