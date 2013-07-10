@@ -1,5 +1,7 @@
 body, html {
   position: relative;
+  width: 100%;
+  height: 100%;
   background-color: #cccccc;
   font-family: 'Arial', 'Helvetica', 'Sans Sarif';
   font-size: 36px;
@@ -12,7 +14,7 @@ body, html {
   position: relative;
   clear: both;
   width: 100%;
-  height: 900px;
+  height: 100%;
   margin: 0;
   overflow: hidden;
 }
