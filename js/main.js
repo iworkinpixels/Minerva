@@ -1,7 +1,24 @@
 var mode="tests";
 
 $(document).ready(function() {
-  $(document).keydown(function(e){
+  $.simpleWeather({
+      zipcode: '11375',
+      unit: 'f',
+      success: function(weather) {
+          html = '<img style="float:right;" width="125px" src="'+weather.image+'">';
+          html += '<p><h2>'+weather.temp+'&deg; '+weather.units.temp+'<br/><span>'+weather.currently+'</span>'+'</h2>';
+          html += '<span style="float: right;">'+weather.city+', '+weather.region+'</span></p>';
+          html += '<a style="float: right;" href="'+weather.link+'">View Forecast &raquo;</a>';
+
+          $("#weather").html(html);
+      },
+      error: function(error) {
+          $("#weather").html('<p>'+error+'</p>');
+      }
+  });
+ 
+
+   $(document).keydown(function(e){
     switch(e.which) {
       case 32: // space bar is submit the currently selected answer
         var url = $('li.selected-answer a').attr('href');
@@ -128,4 +145,5 @@ function rotateNav(theID){
   }
 
 }
+
 
